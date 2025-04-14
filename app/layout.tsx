@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 import { Source_Sans_3 as FontSans } from "next/font/google";
 //nextjs font allows us to import any font from the google fonts
 import "./globals.css";
+import Header from "@/components/common/header";
+import Footer from "@/components/common/footer";
 
+{
+  /* Changing the font here. Create a fnt Variable. */
+}
 const fontSans = FontSans({
   variable: "--font-sans",
   subsets: ["latin"],
@@ -23,7 +28,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${fontSans.variable} font-sans antialiased`}>
-        {children}
+        <div className="relative flex min-h-screen flex-col">
+          <Header></Header>
+          {children}
+          <Footer></Footer>
+        </div>
       </body>
     </html>
   );
