@@ -66,7 +66,7 @@ const PricingCard = ({
         </ul>
         <Link
           href={paymentLink || "#"}
-          className="inline-block w-full text-center bg-rose-500 text-white py-3 rounded-full font-semibold hover:bg-rose-600 transition-colors"
+          className="inline-block w-full text-center bg-rose-800 text-white py-3 rounded-full font-semibold hover:bg-rose-700 transition-colors"
         >
           Buy Now
         </Link>
