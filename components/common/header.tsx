@@ -2,8 +2,9 @@ import Link from "next/link";
 import { FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import NavLink from "./nav-link";
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 export default function Header() {
-  const isLoggedIn = false; // Replace with your authentication logic
+  // const isLoggedIn = false; // Replace with your authentication logic
   return (
     <nav className="container flex items-center justify-between py-4 lg:px-8 px-2 mx-auto">
       <div className="flex lg:flex-1">
@@ -19,7 +20,12 @@ export default function Header() {
         {/* the "#" before the "pricing" link allows the user to jump to a specific anchor html 
         tag within the same page*/}
         <NavLink href="/#pricing">Pricing</NavLink>
-        {isLoggedIn && <NavLink href="/dashboard">Your Summaries</NavLink>}{" "}
+        {
+          <SignedIn>
+            {" "}
+            && <NavLink href="/dashboard">Your Summaries</NavLink>{" "}
+          </SignedIn>
+        }{" "}
         {/* including this link here to the Dashboard page */}
       </div>{" "}
       {/* The dashboard only opens if user is loggedIn */}
@@ -28,20 +34,28 @@ export default function Header() {
       the signIn Function if you are 
       logged Out */}
       <div className="flex lg:justify-end lg:flex-1 ">
-        {isLoggedIn ? (
+        {/*if the user is 
+        signedIn then we show this*/}
+        <SignedIn>
           <div className="flex gap-2 items-center">
             {/* if the user is signed in */}
             <NavLink href={"/upload"}>Upload a PDF</NavLink>{" "}
             {/* including this link here to the Upload page */}
             <div>Pro</div>
-            <Button>user</Button>
+            {/* <Button>user</Button> */}
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
           </div>
-        ) : (
+        </SignedIn>
+
+        {/* if the user is signed out, then we show this */}
+        <SignedOut>
           <div>
             <NavLink href="/sign-in">SignIn</NavLink>{" "}
             {/* including this link here to the SignIn page */}
           </div>
-        )}
+        </SignedOut>
       </div>
     </nav>
   );
