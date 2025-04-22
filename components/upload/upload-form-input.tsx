@@ -10,7 +10,11 @@ interface UploadFormInputProps {
 export default function UploadFormInput({ onSubmit }: UploadFormInputProps) {
   return (
     <div className="space-y-4">
-      <form onSubmit={onSubmit} className="space-y-4">
+      <form
+        onSubmit={onSubmit}
+        className="space-y-4"
+        encType="multipart/form-data"
+      >
         <Input
           id="file"
           name="file"
