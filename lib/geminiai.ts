@@ -1,0 +1,1 @@
+export const generateSummaryUsingGemini = async (pdfText: string) => {

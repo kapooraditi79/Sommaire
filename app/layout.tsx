@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "@/components/common/header";
 import Footer from "@/components/common/footer";
 import { ClerkProvider } from "@clerk/nextjs";
+import { Toaster } from "@/components/ui/sonner";
 
 {
   /* Changing the font here. Create a fnt Variable. */
@@ -33,8 +34,10 @@ export default function RootLayout({
           <div className="relative flex min-h-screen flex-col">
             <Header></Header>
             {children}
+
             <Footer></Footer>
           </div>
+          <Toaster />
         </body>
       </html>
     </ClerkProvider>

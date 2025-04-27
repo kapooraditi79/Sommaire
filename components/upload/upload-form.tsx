@@ -1,6 +1,9 @@
 "use client";
 import UploadFormInput from "@/components/upload/upload-form-input";
 import { z } from "zod";
+import { OurFileRouter } from "@/app/api/uploadthing/core";
+import { useUploadThing } from "@/utils/uploadthing";
+import { generatePdfSummary } from "@/actions/upload_actions";
 
 {
   /*defining the zod schema for the uploaded files. 
@@ -19,7 +22,20 @@ const schema = z.object({
     ),
 });
 export default function UploadForm() {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  // Removed useToast as it is not exported by "sonner"
+  const { startUpload, routeConfig } = useUploadThing("pdfUploader", {
+    onClientUploadComplete: () => {
+      console.log("uploaded successfully!");
+    },
+    onUploadError: (error) => {
+      console.error("error occurred while uploading", error);
+    },
+    onUploadBegin: ({ file }) => {
+      console.log("upload has begun for", file);
+    },
+  });
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("submitted");
     const formData = new FormData(e.currentTarget);
@@ -37,7 +53,12 @@ export default function UploadForm() {
 
     //schema validation with zodd
     //upload the file to uploadthing
+    const resp = await startUpload([file]);
+    if (!resp) return;
+
     //parse the pdf using langchain
+    const summary = await generatePdfSummary(resp);
+    console.log("summary", summary);
     //summarize the pdf using AI
     //save the summary to the database
     //redirect to the [id] summary page
