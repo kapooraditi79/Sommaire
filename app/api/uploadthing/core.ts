@@ -38,6 +38,9 @@ export const ourFileRouter = {
       console.log("Upload complete for userId:", metadata.userId);
       console.log("File URL:", file.ufsUrl);
       return { userId: metadata.userId, file };
+      {
+        /*Returning an object for potential further processing */
+      }
     }),
 } satisfies FileRouter;
 

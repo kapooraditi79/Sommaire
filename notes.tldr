@@ -93,9 +93,9 @@
 		{
 			"id": "pointer:pointer",
 			"typeName": "pointer",
-			"x": 1383.594817838054,
-			"y": 5060.868278087736,
-			"lastActivityTimestamp": 1745761685557,
+			"x": -342.3384028000838,
+			"y": 6666.530502728785,
+			"lastActivityTimestamp": 1745937012638,
 			"meta": {}
 		},
 		{
@@ -791,6 +791,57 @@
 			"typeName": "shape"
 		},
 		{
+			"x": -667.216409537737,
+			"y": 5744.258532599854,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:c41WdBPSS7ctPxLbg6d71",
+			"type": "text",
+			"props": {
+				"color": "red",
+				"size": "m",
+				"w": 878.1875,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "in the uploadForm.tsx file remember to call the \"startUpload\" function"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "on the file uploaded."
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:BIvnrCTkrLzbUMYuLJg5t",
+			"index": "aIAzE",
+			"typeName": "shape"
+		},
+		{
 			"editingShapeId": null,
 			"croppingShapeId": null,
 			"selectedShapeIds": [],
@@ -804,6 +855,477 @@
 			"typeName": "instance_page_state"
 		},
 		{
+			"x": -725.065068136799,
+			"y": 5854.547072737971,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:loAtsKniRw6Lt0yWF98s0",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 1223.4375,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "PDF EXTRACTION AND PARSING"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "using Langchain"
+								}
+							]
+						},
+						{
+							"type": "orderedList",
+							"attrs": {
+								"start": 1
+							},
+							"content": [
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "install: npm i @langchain/community @langchain/core pdf-parse"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "make a folder called as \"actions\" and make a file under it "
+												}
+											]
+										},
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "upload_actions.ts"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "This file includes the actions that will be taken when you upload"
+												}
+											]
+										},
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "the file."
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "In the upload-form.ts, on calling the start_upload function:"
+												}
+											]
+										},
+										{
+											"type": "orderedList",
+											"attrs": {
+												"start": 1
+											},
+											"content": [
+												{
+													"type": "listItem",
+													"content": [
+														{
+															"type": "paragraph",
+															"attrs": {
+																"dir": "auto"
+															},
+															"content": [
+																{
+																	"type": "text",
+																	"text": "it returns the response array as"
+																}
+															]
+														},
+														{
+															"type": "paragraph",
+															"attrs": {
+																"dir": "auto"
+															},
+															"content": [
+																{
+																	"type": "text",
+																	"text": "["
+																}
+															]
+														},
+														{
+															"type": "paragraph",
+															"attrs": {
+																"dir": "auto"
+															},
+															"content": [
+																{
+																	"type": "text",
+																	"text": "  {"
+																}
+															]
+														},
+														{
+															"type": "paragraph",
+															"attrs": {
+																"dir": "auto"
+															},
+															"content": [
+																{
+																	"type": "text",
+																	"text": "    serverData: {"
+																}
+															]
+														},
+														{
+															"type": "paragraph",
+															"attrs": {
+																"dir": "auto"
+															},
+															"content": [
+																{
+																	"type": "text",
+																	"text": "      userId: string;"
+																}
+															]
+														},
+														{
+															"type": "paragraph",
+															"attrs": {
+																"dir": "auto"
+															},
+															"content": [
+																{
+																	"type": "text",
+																	"text": "      file: {"
+																}
+															]
+														},
+														{
+															"type": "paragraph",
+															"attrs": {
+																"dir": "auto"
+															},
+															"content": [
+																{
+																	"type": "text",
+																	"text": "        url: string;"
+																}
+															]
+														},
+														{
+															"type": "paragraph",
+															"attrs": {
+																"dir": "auto"
+															},
+															"content": [
+																{
+																	"type": "text",
+																	"text": "        name: string;"
+																}
+															]
+														},
+														{
+															"type": "paragraph",
+															"attrs": {
+																"dir": "auto"
+															},
+															"content": [
+																{
+																	"type": "text",
+																	"text": "      };"
+																}
+															]
+														},
+														{
+															"type": "paragraph",
+															"attrs": {
+																"dir": "auto"
+															},
+															"content": [
+																{
+																	"type": "text",
+																	"text": "    };"
+																}
+															]
+														},
+														{
+															"type": "paragraph",
+															"attrs": {
+																"dir": "auto"
+															},
+															"content": [
+																{
+																	"type": "text",
+																	"text": "  }"
+																}
+															]
+														},
+														{
+															"type": "paragraph",
+															"attrs": {
+																"dir": "auto"
+															},
+															"content": [
+																{
+																	"type": "text",
+																	"text": "]"
+																}
+															]
+														}
+													]
+												},
+												{
+													"type": "listItem",
+													"content": [
+														{
+															"type": "paragraph",
+															"attrs": {
+																"dir": "auto"
+															},
+															"content": [
+																{
+																	"type": "text",
+																	"text": "This array is passed to the server action function generatePdfSummary(uploadResponse)."
+																}
+															]
+														}
+													]
+												},
+												{
+													"type": "listItem",
+													"content": [
+														{
+															"type": "paragraph",
+															"attrs": {
+																"dir": "auto"
+															},
+															"content": [
+																{
+																	"type": "text",
+																	"text": "MAIN SERVER ACTION"
+																}
+															]
+														}
+													]
+												},
+												{
+													"type": "listItem",
+													"content": [
+														{
+															"type": "paragraph",
+															"attrs": {
+																"dir": "auto"
+															},
+															"content": [
+																{
+																	"type": "text",
+																	"text": "generatepdfSummary (uploadresponse):"
+																}
+															]
+														},
+														{
+															"type": "orderedList",
+															"attrs": {
+																"start": 1
+															},
+															"content": [
+																{
+																	"type": "listItem",
+																	"content": [
+																		{
+																			"type": "paragraph",
+																			"attrs": {
+																				"dir": "auto"
+																			},
+																			"content": [
+																				{
+																					"type": "text",
+																					"text": "it is the pdf processing pipeline after the upload."
+																				}
+																			]
+																		}
+																	]
+																},
+																{
+																	"type": "listItem",
+																	"content": [
+																		{
+																			"type": "paragraph",
+																			"attrs": {
+																				"dir": "auto"
+																			},
+																			"content": [
+																				{
+																					"type": "text",
+																					"text": "it validates input, extracts text, generats summary."
+																				}
+																			]
+																		}
+																	]
+																},
+																{
+																	"type": "listItem",
+																	"content": [
+																		{
+																			"type": "paragraph",
+																			"attrs": {
+																				"dir": "auto"
+																			},
+																			"content": [
+																				{
+																					"type": "text",
+																					"text": "error handling"
+																				}
+																			]
+																		}
+																	]
+																}
+															]
+														}
+													]
+												},
+												{
+													"type": "listItem",
+													"content": [
+														{
+															"type": "paragraph",
+															"attrs": {
+																"dir": "auto"
+															}
+														}
+													]
+												},
+												{
+													"type": "listItem",
+													"content": [
+														{
+															"type": "paragraph",
+															"attrs": {
+																"dir": "auto"
+															}
+														},
+														{
+															"type": "orderedList",
+															"attrs": {
+																"start": 1
+															},
+															"content": [
+																{
+																	"type": "listItem",
+																	"content": [
+																		{
+																			"type": "paragraph",
+																			"attrs": {
+																				"dir": "auto"
+																			}
+																		}
+																	]
+																}
+															]
+														},
+														{
+															"type": "paragraph",
+															"attrs": {
+																"dir": "auto"
+															}
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						}
+					]
+				}
+			},
+			"parentId": "page:BIvnrCTkrLzbUMYuLJg5t",
+			"index": "aH8Ka",
+			"typeName": "shape"
+		},
+		{
 			"x": -766.9390129829844,
 			"y": 2985.6098585873647,
 			"rotation": 0,
@@ -815,7 +1337,7 @@
 			"props": {
 				"color": "black",
 				"size": "m",
-				"w": 1556.4625244140625,
+				"w": 1856.375,
 				"font": "draw",
 				"textAlign": "start",
 				"autoSize": true,
@@ -1029,6 +1551,30 @@
 																{
 																	"type": "text",
 																	"text": "(e.g., the UploadForm component from your previous question)."
+																}
+															]
+														},
+														{
+															"type": "paragraph",
+															"attrs": {
+																"dir": "auto"
+															},
+															"content": [
+																{
+																	"type": "text",
+																	"text": "basically: Exports ourFileRouter as the main file router configuration."
+																}
+															]
+														},
+														{
+															"type": "paragraph",
+															"attrs": {
+																"dir": "auto"
+															},
+															"content": [
+																{
+																	"type": "text",
+																	"text": "               Uses satisfies FileRouter to ensure type safety with TypeScript, confirming that ourFileRouter adheres to the FileRouter interface."
 																}
 															]
 														}
@@ -1436,13 +1982,12 @@
 			"typeName": "shape"
 		},
 		{
-			"editingShapeId": null,
+			"editingShapeId": "shape:loAtsKniRw6Lt0yWF98s0",
 			"croppingShapeId": null,
 			"selectedShapeIds": [
-				"shape:aeQyz6JKqjY1YfaKBWKSH",
-				"shape:aN6IVhcu9vIqhxRKYWZx-"
+				"shape:loAtsKniRw6Lt0yWF98s0"
 			],
-			"hoveredShapeId": null,
+			"hoveredShapeId": "shape:loAtsKniRw6Lt0yWF98s0",
 			"erasingShapeIds": [],
 			"hintingShapeIds": [],
 			"focusedGroupId": null,
@@ -1528,9 +2073,9 @@
 			"typeName": "shape"
 		},
 		{
-			"x": 1878.7303779298518,
-			"y": -4132.0118021666,
-			"z": 0.24718566544505602,
+			"x": 807.3456736527418,
+			"y": -6097.402046332431,
+			"z": 0.7913854751673428,
 			"meta": {},
 			"id": "camera:page:BIvnrCTkrLzbUMYuLJg5t",
 			"typeName": "camera"
@@ -1765,17 +2310,15 @@
 			"followingUserId": null,
 			"opacityForNextShape": 1,
 			"stylesForNextShape": {
-				"tldraw:geo": "rectangle",
 				"tldraw:color": "black",
-				"tldraw:fill": "solid",
-				"tldraw:dash": "solid",
 				"tldraw:font": "draw",
-				"tldraw:verticalAlign": "middle"
+				"tldraw:horizontalAlign": "end",
+				"tldraw:geo": "rectangle"
 			},
 			"brush": null,
 			"scribbles": [],
 			"cursor": {
-				"type": "move",
+				"type": "default",
 				"rotation": 0
 			},
 			"isFocusMode": false,
@@ -1785,8 +2328,8 @@
 			"screenBounds": {
 				"x": 0,
 				"y": 0,
-				"w": 1318.4000244140625,
-				"h": 749.6000366210938
+				"w": 720,
+				"h": 750.4000244140625
 			},
 			"insets": [
 				false,

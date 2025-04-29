@@ -13,6 +13,7 @@ export async function generatePdfSummary(
     }
   ]
 ) {
+  //input validation: Ensures upload succeeded and a valid file URL is available.
   if (!uploadResponse) {
     return {
       success: false,
@@ -21,6 +22,11 @@ export async function generatePdfSummary(
     };
   }
 
+  //Destructuring the uploaded MetaData
+  //extracts:
+  // pdfurl: link to the uploaded file (used for fetch)
+  // fileName: name of the uploaded PDF
+  // userId: used for tracking or storing per-user summaries
   const {
     serverData: {
       userId,
@@ -36,6 +42,14 @@ export async function generatePdfSummary(
     };
   }
   try {
+    {
+      /*
+      on having our pdfurl
+      we call for "fetchAndExtractPdfText"
+      using the langchain pdfloader, it extracts the pdf text
+      
+      */
+    }
     const pdfText = await fetchAndExtractPdfText(pdfurl);
     let summary;
     try {
