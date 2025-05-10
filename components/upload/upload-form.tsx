@@ -73,8 +73,17 @@ export default function UploadForm() {
     if (!resp) return;
 
     //parse the pdf using langchain
-    const summary = await generatePdfSummary(resp);
-    console.log("summary", summary);
+    const result = await generatePdfSummary(resp);
+    console.log("summary", result);
+
+    const { data = null, message = null } = result || {};
+
+    if (data) {
+      console.log("WE ARE SAVING YOUR SUMMARY TO THE DATABASE. WAIT UP");
+      if (data.summary) {
+        //save the summary to the database
+      }
+    }
     //summarize the pdf using AI
     //save the summary to the database
     //redirect to the [id] summary page

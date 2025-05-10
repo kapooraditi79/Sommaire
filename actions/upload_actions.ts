@@ -1,5 +1,8 @@
 "use server";
 import { fetchAndExtractPdfText } from "@/lib/langchain";
+import { generateSummaryFromOpenAI } from "@/lib/openai";
+import { generateSummaryUsingGemini } from "@/lib/geminiai";
+
 export async function generatePdfSummary(
   uploadResponse: [
     {
@@ -51,17 +54,44 @@ export async function generatePdfSummary(
       */
     }
     const pdfText = await fetchAndExtractPdfText(pdfurl);
+    console.log({ pdfText });
     let summary;
+    // try {
+    //   const summary = await generateSummaryFromOpenAI(pdfText);
+    //   console.log({ summary });
+    // } catch (error) {
+    //   console.error(error);
+    //   if (
+    //     error instanceof Error &&
+    //     error.message === "Rate limit exceeded. Please try again later."
+    //   ) {
     try {
       summary = await generateSummaryUsingGemini(pdfText);
-    } catch (geminiError) {
-      console.error("Error generating summary using Gemini:", geminiError);
+      console.log({ summary });
+    } catch (error) {
+      console.error("Error generating summary using GEMINI:", error);
       return {
         success: false,
-        message: "Error generating summary using Gemini",
+        message: "Error generating summary using GEMINI",
         data: null,
       };
     }
+
+    //   }
+    // }
+    if (!summary) {
+      return {
+        success: false,
+        message: "Error generating summary using OpenAI",
+        data: null,
+      };
+    }
+
+    return {
+      success: true,
+      message: "summary generated successfully",
+      data: summary,
+    };
   } catch (error) {
     console.error("Error fetching PDF text:", error);
     return {
